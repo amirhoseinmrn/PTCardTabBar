@@ -17,9 +17,9 @@ class PTTabBarViewController: PTCardTabBarController {
         let vc3 = LabelViewController(title: "More")
         
         
-        vc1.tabBarItem = UITabBarItem(title: "", image: UIImage(named: "home"), tag: 1)
-        vc2.tabBarItem = UITabBarItem(title: "", image: UIImage(named: "calendar"), tag: 2)
-        vc3.tabBarItem = UITabBarItem(title: "", image: UIImage(named: "more"), tag: 3)
+        vc1.tabBarItem = UITabBarItem(title: "Home", image: UIImage(named: "home"), tag: 1)
+        vc2.tabBarItem = UITabBarItem(title: "Calendar", image: UIImage(named: "calendar"), tag: 2)
+        vc3.tabBarItem = UITabBarItem(title: "More", image: UIImage(named: "more"), tag: 3)
         
         self.viewControllers = [vc1, vc2, vc3]
         

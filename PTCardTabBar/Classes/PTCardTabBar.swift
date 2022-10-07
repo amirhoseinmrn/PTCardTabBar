@@ -180,6 +180,8 @@ open class PTCardTabBar: UIView {
         for (bIndex, button) in buttons().enumerated() {
             button.selectedColor = tintColor
             button.isSelected = bIndex == index
+            let buttonImage = bIndex == index ? items[bIndex].selectedImage : items[bIndex].image
+            button.setImage(buttonImage, for: .normal)
             
             if bIndex == index {
                 indicatorViewXConstraint = indicatorView.centerXAnchor.constraint(equalTo: button.centerXAnchor)

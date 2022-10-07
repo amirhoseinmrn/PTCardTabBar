@@ -43,7 +43,7 @@ class LabelViewController: UIViewController {
         super.viewDidLoad()
         
         
-        view.backgroundColor = UIColor(white: 0.98, alpha: 1)
+        view.backgroundColor = .red
 
         // Do any additional setup after loading the view.
         view.addSubview(label)
