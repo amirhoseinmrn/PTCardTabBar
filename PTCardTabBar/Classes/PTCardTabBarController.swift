@@ -24,6 +24,12 @@ open class PTCardTabBarController: UITabBarController {
         }
     }
     
+    public var shadowEnable: Bool = false {
+        didSet {
+            customTabBar.shadowEnable = shadowEnable
+        }
+    }
+    
     public let customTabBar: PTCardTabBar = {
         return PTCardTabBar()
     }()
@@ -48,7 +54,7 @@ open class PTCardTabBarController: UITabBarController {
         }
     }
     
-    fileprivate var bottomSpacing: CGFloat = 20
+    fileprivate var bottomSpacing: CGFloat = 0
     fileprivate var tabBarHeight: CGFloat = 70
     fileprivate var horizontleSpacing: CGFloat = 20
     

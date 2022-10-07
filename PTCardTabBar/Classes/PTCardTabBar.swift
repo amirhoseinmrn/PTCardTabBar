@@ -27,6 +27,12 @@ open class PTCardTabBar: UIView {
         reloadApperance()
     }
     
+    var shadowEnable: Bool = false {
+        didSet {
+            setup()
+        }
+    }
+    
     func reloadApperance(){
         
         buttons().forEach { button in
@@ -84,12 +90,14 @@ open class PTCardTabBar: UIView {
         addSubview(stackView)
         addSubview(indicatorView)
         
-        self.backgroundColor = .white
+        self.backgroundColor = .clear
         
-        self.layer.shadowColor = UIColor.black.cgColor
-        self.layer.shadowOffset = CGSize(width: 3, height: 3)
-        self.layer.shadowRadius = 6
-        self.layer.shadowOpacity = 0.15
+        if shadowEnable {
+            self.layer.shadowColor = UIColor.black.cgColor
+            self.layer.shadowOffset = CGSize(width: 3, height: 3)
+            self.layer.shadowRadius = 6
+            self.layer.shadowOpacity = 0.15
+        }
         
         indicatorViewYConstraint?.isActive = false
         indicatorViewYConstraint = indicatorView.topAnchor.constraint(equalTo: stackView.bottomAnchor, constant: -10.5)
